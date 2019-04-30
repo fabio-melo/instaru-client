@@ -1,4 +1,4 @@
-from profile import ProfileCollection, firestore
+from fparser import FirestoreFactory, FIRESTORE_URL
 import subprocess
 #Python Combobox Application  
 import tkinter as tk  
@@ -28,7 +28,7 @@ def start_gui():
   action_button= ttk.Combobox(win, width=12, textvariable=number)  
   #Adding Values  
 
-  mydata = ProfileCollection(firestore)
+  mydata = FirestoreFactory().build_collection(FIRESTORE_URL)
 
   action_button['values']=(mydata.profile_list)  
   action_button.grid(column=0,row=1)  
