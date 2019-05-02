@@ -5,7 +5,6 @@ import requests
 
 FIRESTORE_URL = 'https://firestore.googleapis.com/v1/projects/autoupd-6c999/databases/(default)/documents/profiles'
 
-
 class FirestoreFactory:
 
   def fetch_profiles(self, profile_data):
