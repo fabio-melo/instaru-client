@@ -1,5 +1,6 @@
 import requests
 import os
+import easygui
 
 LICENSE_SERVER = "https://firestore.googleapis.com/v1/projects/instaru-license/databases/(default)/documents/profiles"
 
@@ -25,15 +26,16 @@ class LicenseFactory:
         if self.verify_license(license_key): return True
         else: return False
     else:
-      l = input("license key =")
+      l = easygui.enterbox("INSTARU - Chave de Licença")
       if self.verify_license(l):
         with open(license_file,'w') as license_write:
+          easygui.msgbox("Licença Validada")
           license_write.write(l)
           return True
       else:
+        easygui.msgbox("Licença Invalida")
         print("INVALID LICENSE")
         return False
 
 
-  
-      
+LicenseFactory().check_if_license()
