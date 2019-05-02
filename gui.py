@@ -1,4 +1,4 @@
-from fparser import FirestoreFactory, FIRESTORE_URL
+from firebase import FirestoreFactory, FIRESTORE_URL
 import subprocess
 #Python Combobox Application  
 import tkinter as tk  
@@ -6,6 +6,7 @@ from tkinter import ttk
 
 def run_thing(profile):
   print(profile)
+  profile.build()
   profile.run_all()
 
 def start_gui():
@@ -18,7 +19,7 @@ def start_gui():
   #Button Action  
   def click():  
     action.configure(text="Executando Procedimento")
-    run_thing(mydata.find_by_name(action_button.get()))
+    run_thing(mydata.find_profile(action_button.get()))
 
   #button Creation  
   action = ttk.Button(win, text="Click", command=click)  
