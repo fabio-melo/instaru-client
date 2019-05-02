@@ -1,5 +1,5 @@
 import requests
-
+import os
 
 LICENSE_SERVER = "https://firestore.googleapis.com/v1/projects/instaru-license/databases/(default)/documents/profiles"
 
@@ -17,7 +17,20 @@ class LicenseFactory:
       return False
 
 
-
+  def check_if_license(self):
+    license_file = 'license.key'
+    if os.path.isfile(license_file):
+      with open(license_file,'r') as lf:
+        license_key = lf.read()
+        if self.verify_license(license_key): return True
+        else: return False
+    else:
+      l = input("license key =")
+      if self.verify_license(l):
+        with open(license_file,'w') as license_write:
+          license_write.write(l)
+      else:
+        print("INVALID LICENSE")
 
 
   

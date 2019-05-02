@@ -14,8 +14,8 @@ class FirestoreFactory:
       x['fields'], self.build_func) \
       for x in profile_data['documents']]
   
-  def build_collection(self, firestore):
-    stored_json = requests.get(firestore).json()
+  def build_collection(self):
+    stored_json = requests.get(FIRESTORE_URL).json()
     return ProfileCollection(self.fetch_profiles(stored_json))
 
   def build_func(self, fields):
