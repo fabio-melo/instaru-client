@@ -1,4 +1,4 @@
-from license import LicenseFactory
+from licensing import LicenseFactory
 from firebase import FirestoreFactory
 
 def licensing_tests():

@@ -29,8 +29,10 @@ class LicenseFactory:
       if self.verify_license(l):
         with open(license_file,'w') as license_write:
           license_write.write(l)
+          return True
       else:
         print("INVALID LICENSE")
+        return False
 
 
   
