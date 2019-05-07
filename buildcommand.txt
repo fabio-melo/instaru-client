@@ -1,1 +1,1 @@
-pyinstaller --uac-admin --uac-uiaccess  --onefile --icon='img/favicon.ico' main.py
+pyinstaller --onefile --icon='img/favicon.ico' --name='Instaru' main.py

@@ -3,6 +3,7 @@ import subprocess
 #Python Combobox Application  
 import tkinter as tk  
 from tkinter import ttk  
+import logging as log
 
 def run_thing(profile):
   print(profile)

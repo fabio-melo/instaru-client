@@ -2,6 +2,7 @@ from abc import abstractclassmethod
 from profile import Profile, ProfileCollection
 from action import DownloadAction, CommandAction
 import requests
+import logging as log
 
 FIRESTORE_URL = 'https://firestore.googleapis.com/v1/projects/autoupd-6c999/databases/(default)/documents/profiles'
 
@@ -43,14 +44,13 @@ class FirestoreFactory:
         except:
           download_body['run_arguments'] = False
 
-        print(download_body, end="\n\n")
+        log.info(download_body)
         action_queue.append(DownloadAction(download_body))
       
       #commands
     if 'commands' in fields: 
       for x in fields['commands']['arrayValue']['values']:
         command_body = {}
-        print("AAAAA")
         command_body['command_to_run'] = x['mapValue']['fields']['command_to_run']['stringValue']
         action_queue.append(CommandAction(command_body))
 

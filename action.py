@@ -60,6 +60,7 @@ class DownloadAction():
           log.info(build_command)
           output = subprocess.call(build_command, shell=True)
           log.info(output)
+          log.info("Procedimento Concluido")
         except:
           log.error('erro na execução do comando / malformado?')
 
@@ -68,7 +69,6 @@ class CommandAction():
     #self.need_admin = command_body['need_admin']
     self.command_to_run = command_body['command_to_run']
   def execute(self):
-    print(self.command_to_run)
-    log.info(f'COMANDO {self.command_to_run}')
+    log.info(f'Executando comando {self.command_to_run}')
     output = subprocess.call(self.command_to_run, shell=True)
     log.info(output)

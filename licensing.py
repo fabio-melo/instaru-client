@@ -1,6 +1,7 @@
 import requests
 import os
 import easygui
+import logging as log
 
 LICENSE_SERVER = "https://firestore.googleapis.com/v1/projects/instaru-license/databases/(default)/documents/profiles"
 
@@ -11,10 +12,10 @@ class LicenseFactory:
     licenses = requests.get(LICENSE_SERVER).json()
     for x in licenses['documents']:
       if license_key == x['fields']['serial']['stringValue']:
-        print(f"LICENSE OK - {x['fields']['name']['stringValue']}")
+        log.info(f"LICENSE OK - {x['fields']['name']['stringValue']}")
         return True
     else:
-      print(f'LICENSE CHECK FAILED')
+      log.error(f'LICENSE CHECK FAILED')
       return False
 
 
@@ -34,8 +35,6 @@ class LicenseFactory:
           return True
       else:
         easygui.msgbox("Licença Invalida")
-        print("INVALID LICENSE")
+        log.error("INVALID LICENSE")
         return False
 
-
-LicenseFactory().check_if_license()

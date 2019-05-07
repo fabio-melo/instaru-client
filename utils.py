@@ -1,4 +1,6 @@
 import hashlib
+import logging as log
+
 
 def check_sha256(filename):
 
@@ -7,6 +9,6 @@ def check_sha256(filename):
       # Read and update hash string value in blocks of 4K
       for byte_block in iter(lambda: f.read(4096),b""):
           sha256_hash.update(byte_block)
-      print(sha256_hash.hexdigest())
+      log.info(f"SHA256 HASH: {sha256_hash.hexdigest()}")
       return sha256_hash.hexdigest()
 

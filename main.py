@@ -3,6 +3,10 @@ from cli import start_cli
 from sys import argv
 from licensing import LicenseFactory
 import ctypes, sys, logging
+from time import time
+from pathlib import Path
+import os
+
 
 def is_admin():
     try:
@@ -11,7 +15,16 @@ def is_admin():
         return False
 
 if __name__ == '__main__':
-  logging.basicConfig(level=logging.INFO)
+  # LOGS
+  logdir = Path(os.getcwd())
+  logdir = logdir / 'logs'
+
+  if not logdir.exists(): logdir.mkdir()
+  logpath = logdir / f"instaru_{int(time())}.log"
+
+  logging.basicConfig(level=logging.INFO, filename=logpath)
+  
+  #LICENÇA
   if LicenseFactory().check_if_license():
 
     if len(argv) > 1:
