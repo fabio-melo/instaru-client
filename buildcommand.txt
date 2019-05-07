@@ -1,0 +1,1 @@
+pyinstaller --uac-admin --uac-uiaccess  --onefile --icon='img/favicon.ico' main.py

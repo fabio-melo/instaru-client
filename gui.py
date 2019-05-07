@@ -12,17 +12,18 @@ def run_thing(profile):
 def start_gui():
   win = tk.Tk()  
   #Application Name  
-  win.title("Instaru ThinGUI")  
+  win.title("Instaru")  
+  win.resizable(0,0)
   #Label Creation  
-  ttk.Label(win, text="Escolha o Perfil").grid(column=0,row=0)  
+  ttk.Label(win, text="Selecione Perfil").grid(column=0,row=0)  
 
   #Button Action  
   def click():  
-    action.configure(text="Executando Procedimento")
+    action.configure(text="Executando")
     run_thing(mydata.find_profile(action_button.get()))
 
   #button Creation  
-  action = ttk.Button(win, text="Click", command=click)  
+  action = ttk.Button(win, text="Executar", command=click)  
   action.grid(column=1,row=1)  
   #Combobox Creation  
   number= tk.StringVar()  
