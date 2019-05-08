@@ -1,8 +1,10 @@
 import logging as log
+import os
 
 class Profile():
-  def __init__(self, name, fields, builder_func):
+  def __init__(self, name, operating_system, fields, builder_func):
     self.name = name
+    self.operating_system = operating_system
     self.fields = fields
     self.action_queue = []
     self.builder_func = builder_func
@@ -26,4 +28,17 @@ class ProfileCollection:
     else: 
       log.error("Profile not found")
       raise Exception("not found")
+
+  def find_profile_for_this_os(self):
+    pr = []
+    if os.name == 'nt':
+      for prof in self.profile_list:
+        if prof.operating_system == 'win':
+          pr.append(prof.name)
+    elif os.name == 'posix':
+      for prof in self.profile_list:
+        if not prof.operating_system == 'win':
+          pr.append(prof.name)
+      
+    return pr
 

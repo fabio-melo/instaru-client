@@ -11,7 +11,8 @@ class FirestoreFactory:
   def fetch_profiles(self, profile_data):
     """retorna nome e ações"""
     return [Profile(
-      x['fields']['name']['stringValue'], \
+      x['fields']['name']['stringValue'],
+      x['fields']['system']['stringValue'], \
       x['fields'], self.build_func) \
       for x in profile_data['documents']]
   

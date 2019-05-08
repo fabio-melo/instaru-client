@@ -33,7 +33,7 @@ def start_gui():
 
   mydata = FirestoreFactory().build_collection()
 
-  action_button['values']=(mydata.profile_list)  
+  action_button['values']=(mydata.find_profile_for_this_os())  
   action_button.grid(column=0,row=1)  
   action_button.current()  
   #Calling Main()  

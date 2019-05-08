@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['main.py'],
+a = Analysis(['instaru.py'],
              pathex=['D:\\dev\\Instaru\\instaru-client'],
              binaries=[],
              datas=[],
