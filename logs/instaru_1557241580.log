@@ -1,9 +1,0 @@
-INFO:root:LICENSE OK - Fabio
-INFO:root:{'url': 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe', 'check_integrity': True, 'sha256': '9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e', 'run_file': True, 'run_arguments': '/S'}
-INFO:root:Download: https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe
-INFO:root:File: npp.7.6.6.Installer.exe
-INFO:root:SHA256 HASH: 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
-INFO:root:FILE OK, SHA256 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
-INFO:root:START /WAIT npp.7.6.6.Installer.exe /S
-INFO:root:0
-INFO:root:Procedimento Concluido

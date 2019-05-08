@@ -2,10 +2,10 @@ from gui import start_gui
 from cli import start_cli
 from sys import argv
 from licensing import LicenseFactory
-import ctypes, sys, logging
+import ctypes, sys, os
+import logging as log
 from time import time
 from pathlib import Path
-import os
 
 
 def is_admin():
@@ -22,7 +22,18 @@ if __name__ == '__main__':
   if not logdir.exists(): logdir.mkdir()
   logpath = logdir / f"instaru_{int(time())}.log"
 
-  logging.basicConfig(level=logging.INFO, filename=logpath)
+  file_handler = log.FileHandler(filename=logpath)
+  stdout_handler = log.StreamHandler(sys.stdout)
+  handlers = [file_handler, stdout_handler]
+  log.basicConfig(
+    level=log.INFO, 
+    format='[%(asctime)s]  %(levelname)s - %(message)s',
+    handlers=handlers
+    )
+  #{%(filename)s:%(lineno)d}
+
+
+  
   
   #LICENÇA
   if LicenseFactory().check_if_license():

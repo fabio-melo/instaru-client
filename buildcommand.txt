@@ -1,1 +1,1 @@
-pyinstaller --onefile --icon='img/favicon.ico' --name='Instaru' main.py
+pyinstaller --onefile --icon='img/favicon.ico' --name='instaru' main.py

@@ -1,3 +1,4 @@
+import logging as log
 
 class Profile():
   def __init__(self, name, fields, builder_func):
@@ -22,5 +23,7 @@ class ProfileCollection:
   def find_profile(self, name):   
     for prof in self.profile_list:
       if prof.name == name: return prof
-    else: raise Exception("not found")
+    else: 
+      log.error("Profile not found")
+      raise Exception("not found")
 
