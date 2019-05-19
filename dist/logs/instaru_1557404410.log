@@ -1,0 +1,11 @@
+[2019-05-09 09:20:10,722]  INFO - LICENSE OK - Fabio
+[2019-05-09 09:20:21,935]  INFO - {'url': 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe', 'check_integrity': True, 'sha256': '9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e', 'run_file': True, 'run_arguments': '/S'}
+[2019-05-09 09:20:21,935]  INFO - Download: https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe
+[2019-05-09 09:20:23,044]  INFO - File: npp.7.6.6.Installer.exe
+[2019-05-09 09:20:39,336]  INFO - SHA256 HASH: 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
+[2019-05-09 09:20:39,336]  INFO - FILE OK, SHA256 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
+[2019-05-09 09:20:39,336]  INFO - START /WAIT npp.7.6.6.Installer.exe /S
+[2019-05-09 09:20:42,005]  INFO - 0
+[2019-05-09 09:20:42,006]  INFO - Procedimento Concluido
+[2019-05-09 09:20:42,006]  INFO - Executando comando dir
+[2019-05-09 09:20:42,133]  INFO - 0

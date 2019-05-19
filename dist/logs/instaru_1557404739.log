@@ -1,0 +1,20 @@
+[2019-05-09 09:25:39,838]  INFO - LICENSE OK - Fabio
+[2019-05-09 09:25:40,379]  INFO - Perfil Encontrado, Executando notepad++
+[2019-05-09 09:25:40,381]  INFO - {'url': 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe', 'check_integrity': True, 'sha256': '9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e', 'run_file': True, 'run_arguments': '/S'}
+[2019-05-09 09:25:40,388]  INFO - {'url': 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B8BB05DB8-801E-9F9C-EC49-AE542A386CB4%7D%26lang%3Den%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe', 'check_integrity': False, 'sha256': False, 'run_file': True, 'run_arguments': '--silent --install'}
+[2019-05-09 09:25:40,397]  INFO - {'url': 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe', 'check_integrity': False, 'sha256': False, 'run_file': True, 'run_arguments': '/S'}
+[2019-05-09 09:25:40,401]  INFO - {'url': 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe', 'check_integrity': False, 'sha256': False, 'run_file': True, 'run_arguments': '/S'}
+[2019-05-09 09:25:40,403]  INFO - Download: https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe
+[2019-05-09 09:25:41,467]  INFO - File: npp.7.6.6.Installer.exe
+[2019-05-09 09:26:04,665]  INFO - SHA256 HASH: 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
+[2019-05-09 09:26:04,668]  INFO - FILE OK, SHA256 9582fec10e6ca488ab506a96dfeb5da56c9425ca32a8481e060bd06893fb1b3e
+[2019-05-09 09:26:04,670]  INFO - START /WAIT npp.7.6.6.Installer.exe /S
+[2019-05-09 09:26:10,362]  INFO - 0
+[2019-05-09 09:26:10,362]  INFO - Procedimento Concluido
+[2019-05-09 09:26:10,364]  INFO - Download: https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B8BB05DB8-801E-9F9C-EC49-AE542A386CB4%7D%26lang%3Den%26browser%3D4%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe
+[2019-05-09 09:26:10,731]  INFO - File: ChromeSetup.exe
+[2019-05-09 09:26:12,268]  INFO - START /WAIT ChromeSetup.exe --silent --install
+[2019-05-09 09:26:15,472]  INFO - 0
+[2019-05-09 09:26:15,474]  INFO - Procedimento Concluido
+[2019-05-09 09:26:15,476]  INFO - Download: https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.Installer.exe
+[2019-05-09 09:26:16,664]  INFO - File: npp.7.6.6.Installer.exe

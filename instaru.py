@@ -36,7 +36,7 @@ if __name__ == '__main__':
   
   
   #LICENÇA
-  if LicenseFactory().check_if_license():
+  if True: #LicenseFactory().check_if_license():
 
     if len(argv) > 1:
       start_cli(argv[1])
